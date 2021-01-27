@@ -1,0 +1,47 @@
+<!--
+ * @Author: HCLonely
+ * @Date: 2021-01-26 13:21:24
+ * @LastEditTime: 2021-01-26 20:42:36
+ * @LastEditors: Please set LastEditors
+ * @Description: 模型预览
+ * @FilePath: \live2dNodeApi\views\preview.ejs
+-->
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="HCLonely" />
+  <title>Live2d Model</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <style>
+    [data-fancybox] {
+      width: 280px;
+      display: inline-block;
+    }
+
+    [data-fancybox]>div {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin: 10px 0 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 align="center" id="preview">模型预览</h1>
+  <% for (let i in models) { %>
+    <% let num = parseInt(i) + 1 %>
+    <a data-fancybox="gallery" href="/<%- num %>.png" data-caption="模型<%- num %>-1"><img class="lazyload" alt="模型<%- num %>-1" src="/<%- num %>.png" />
+      <div>模型<%- num %>-1</div>
+    </a>
+  <% } %>
+</body>
+
+</html>
