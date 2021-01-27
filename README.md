@@ -1,8 +1,8 @@
 <!--
  * @Author: HCLonely
  * @Date: 2021-01-26 16:39:29
- * @LastEditTime: 2021-01-27 16:38:21
- * @LastAuthor: HCLonely
+ * @LastEditTime: 2021-01-27 16:43:22
+ * @LastAuthor: Please set LastEditors
  * @Description: README
  * @FilePath: \live2dNodeApi\README.md
 -->
@@ -67,6 +67,7 @@ models
 ### 依赖安装慢
 
 [npm 安装慢](https://www.baidu.com/s?ie=utf-8&wd=npm%E5%AE%89%E8%A3%85%E6%85%A2)
+
 [下载 Chromium 慢](https://www.baidu.com/s?ie=utf-8&wd=puppeteer%E5%AE%89%E8%A3%85%E6%85%A2)
 
 ### 更新模型后顺序乱了
