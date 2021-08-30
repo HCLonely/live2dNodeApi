@@ -1,3 +1,5 @@
 node_modules
 .history
 preview/*.png
+
+.vercel
