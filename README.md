@@ -11,11 +11,17 @@
 
 ## 使用方法
 
+### 使用本地服务器搭建
+
 1. 安装[NodeJs](https://nodejs.org/en/),[Git](https://git-scm.com/)
 2. 克隆本项目`git clone https://github.com/HCLonely/live2dNodeApi.git`
 3. 定位到项目目录`cd live2dNodeApi`
 4. 安装依赖`npm i -S`或`cnpm i -S`
 5. 启动服务器`npm start`
+
+### 使用Vercel搭建
+
+[点我一键搭建](https://vercel.com/import/project?template=https://github.com/HCLonely/live2dNodeApi)
 
 ## 命令
 

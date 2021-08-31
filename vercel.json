@@ -1,14 +1,23 @@
 {
+    "name": "Live2d Node Api",
     "version": 2,
     "builds": [
         {
-            "src": "./main.js",
+            "src": "/html/**/*",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "/modelList.json",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "/main.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/.*",
             "dest": "/main.js"
         }
     ]

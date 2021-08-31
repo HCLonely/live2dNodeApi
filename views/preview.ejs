@@ -38,7 +38,7 @@
   <h1 align="center" id="preview">模型预览</h1>
   <% for (let i in models) { %>
     <% let num = parseInt(i) + 1 %>
-    <a data-fancybox="gallery" href="/<%- num %>.png" data-caption="模型<%- num %>-1"><img class="lazyload" alt="模型<%- num %>-1" src="/<%- num %>.png" />
+    <a data-fancybox="gallery" href="/<%- num %>.png" data-caption="模型<%- num %>"><img class="lazyload" alt="模型<%- num %>" src="/<%- num %>.png" />
       <div>模型<%- num %>-1</div>
     </a>
   <% } %>
