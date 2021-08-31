@@ -1,7 +1,7 @@
 <!--
  * @Author: HCLonely
  * @Date: 2021-01-26 16:39:29
- * @LastEditTime: 2021-01-27 16:43:22
+ * @LastEditTime: 2021-08-31 17:02:13
  * @LastAuthor: Please set LastEditors
  * @Description: README
  * @FilePath: \live2dNodeApi\README.md
@@ -20,6 +20,8 @@
 5. 启动服务器`npm start`
 
 ### 使用Vercel搭建
+
+> 预览页面的图片需要使用`npm run screenshot`命令生成，自动部署不会自动生成！
 
 [点我一键搭建](https://vercel.com/import/project?template=https://github.com/HCLonely/live2dNodeApi)
 
