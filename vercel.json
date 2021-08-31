@@ -6,6 +6,10 @@
             "use": "@vercel/static"
         },
         {
+            "src": "/models/**/*",
+            "use": "@vercel/static"
+        },
+        {
             "src": "/modelList.json",
             "use": "@vercel/static"
         },
@@ -20,8 +24,8 @@
     ],
     "routes": [
         {
-            "src": "/.*",
-            "dest": "/main.js"
+            "src": "/(.*)",
+            "dest": "/"
         }
     ]
 }
