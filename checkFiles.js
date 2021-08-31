@@ -18,6 +18,8 @@ const log = {
   warning: e => console.log(warning(e))
 }
 
+console.log('正在检测检测模型格式及完整性...')
+
 const modelsDirs1 = fs.readdirSync('models')
 for (const modelsDir1 of modelsDirs1) {
   const modelsDir1Path = path.join('models', modelsDir1)
@@ -38,7 +40,7 @@ for (const modelsDir1 of modelsDirs1) {
   }
 }
 
-function check(modelsDir2Path) {
+function check (modelsDir2Path) {
   const modelJsonPath1 = path.join(modelsDir2Path, 'index.json')
   const modelJsonPath2 = path.join(modelsDir2Path, 'model.json')
   const modelJsonPath = fs.existsSync(modelJsonPath1) ? modelJsonPath1 : (fs.existsSync(modelJsonPath2) ? modelJsonPath2 : null)

@@ -44,4 +44,5 @@ async function screenShot () {
 
   await browser.close()
   spawn('taskkill', ['/PID', ls.pid, '/T', '/F'])
+  console.log('截图任务完成')
 }

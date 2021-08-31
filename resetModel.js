@@ -9,6 +9,7 @@
 
 const fs = require('fs-extra')
 
+console.log('正在更新模型列表...')
 const models1 = fs.readdirSync('models')
 for (const model1 of models1) {
   const models2 = fs.readdirSync('models/' + model1).map(dir => model1 + '/' + dir)
@@ -27,3 +28,4 @@ const modelList = {
   models: models1
 }
 fs.writeFileSync('modelList.json', JSON.stringify(modelList, null, 2))
+console.log('模型列表更新完成')

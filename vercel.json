@@ -1,7 +1,13 @@
 {
-    "name": "Live2d Node Api",
     "version": 2,
     "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "./"
+            }
+        },
         {
             "src": "/html/**/*",
             "use": "@vercel/static"
