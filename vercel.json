@@ -17,7 +17,7 @@
             "use": "@vercel/static"
         },
         {
-            "src": "/pewview/*.png",
+            "src": "/preview/*.png",
             "use": "@vercel/static"
         },
         {
