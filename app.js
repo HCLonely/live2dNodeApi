@@ -1,8 +1,8 @@
 /*
  * @Author: HCLonely
  * @Date: 2021-01-26 11:23:19
- * @LastEditTime: 2021-01-26 20:37:19
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-08-30 20:55:36
+ * @LastEditors: Steve Li
  * @Description: 主文件
  * @FilePath: \live2dNodeApi\app.js
  */
