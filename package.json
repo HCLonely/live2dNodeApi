@@ -10,7 +10,7 @@
     "check": "node resetModel.js && node checkFiles.js",
     "screenshot": "node screenShot.js",
     "pre": "start http://127.0.0.1:2333/preview",
-    "build": "node resetModel.js && node checkFiles.js && node generateIndex.js"
+    "build": "node resetModel.js && node checkFiles.js && node screenShot.js && node generateIndex.js"
   },
   "author": "HCLonely",
   "license": "MIT",

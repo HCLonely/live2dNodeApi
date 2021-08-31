@@ -1,7 +1,7 @@
 <!--
  * @Author: HCLonely
  * @Date: 2021-01-26 16:39:29
- * @LastEditTime: 2021-08-31 17:02:13
+ * @LastEditTime: 2021-08-31 18:35:04
  * @LastAuthor: Please set LastEditors
  * @Description: README
  * @FilePath: \live2dNodeApi\README.md
@@ -13,7 +13,7 @@
 
 ### 使用本地服务器搭建
 
-1. 安装[NodeJs](https://nodejs.org/en/),[Git](https://git-scm.com/)
+1. 安装[NodeJs](https://nodejs.org/en/), [Git](https://git-scm.com/)
 2. 克隆本项目`git clone https://github.com/HCLonely/live2dNodeApi.git`
 3. 定位到项目目录`cd live2dNodeApi`
 4. 安装依赖`npm i -S`或`cnpm i -S`
@@ -21,9 +21,14 @@
 
 ### 使用Vercel搭建
 
-> 预览页面的图片需要使用`npm run screenshot`命令生成，自动部署不会自动生成！
-
-[点我一键搭建](https://vercel.com/import/project?template=https://github.com/HCLonely/live2dNodeApi)
+1. 安装[NodeJs](https://nodejs.org/en/), [Git](https://git-scm.com/)
+2. 克隆本项目`git clone https://github.com/HCLonely/live2dNodeApi.git`
+3. 定位到项目目录`cd live2dNodeApi`
+4. 安装依赖`npm i -S`或`cnpm i -S`
+5. 安装Vercel Cli`npm install vercel -g`
+6. 登录Vercel`vercel login`
+7. 预处理`npm run build`
+8. 部署到Vercel`vercel`
 
 ## 命令
 
