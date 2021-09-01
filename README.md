@@ -1,7 +1,7 @@
 <!--
  * @Author: HCLonely
  * @Date: 2021-01-26 16:39:29
- * @LastEditTime: 2021-09-01 14:02:48
+ * @LastEditTime: 2021-09-01 15:27:19
  * @LastAuthor: Please set LastEditors
  * @Description: README
  * @FilePath: \live2dNodeApi\README.md
@@ -19,9 +19,20 @@
 4. 安装依赖`npm install` / `cnpm install` / `pnpm install`
 5. 启动服务器`npm start`
 
-### 使用Vercel一键搭建
+### 使用Vercel搭建
+
+#### 一键搭建
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/HCLonely/live2dNodeApi)
+
+#### 自定义模型
+
+1. 安装[NodeJs](https://nodejs.org/en/), [Git](https://git-scm.com/)
+2. 安装Vercel CLI`npm install vercel -g`
+3. 克隆本项目`git clone https://github.com/HCLonely/live2dNodeApi.git`
+4. 添加你的模型
+5. 运行命令`npm run build`
+6. 部署到Vercel`vercel --prod`
 
 ## 命令
 

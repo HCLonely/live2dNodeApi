@@ -1,7 +1,7 @@
 /*
  * @Author: HCLonely
  * @Date: 2021-01-26 19:34:37
- * @LastEditTime: 2021-09-01 15:11:55
+ * @LastEditTime: 2021-09-01 15:20:51
  * @LastEditors: HCLonely
  * @Description: 生成模型预览图
  * @FilePath: \live2dNodeApi\screenShot.js
@@ -53,7 +53,7 @@
     for (let i = 1; i <= num; i++) {
       console.log('正在截图', i + '/' + num)
       await page.goto('http://127.0.0.1:' + port + '/preview.html?id=' + i, { waitUntil: 'networkidle0' })
-      await page.screenshot({ path: 'static/static/screenshot/' + i + '.png' })
+      await page.screenshot({ path: 'static/screenshot/' + i + '.png' })
     }
 
     await browser.close()
