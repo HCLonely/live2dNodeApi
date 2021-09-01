@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
@@ -17,15 +20,17 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
+    "chrome-aws-lambda": "^10.1.0",
     "cookie-parser": "^1.4.5",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "fs-extra": "^9.1.0",
     "http-errors": "^1.8.0",
     "marked": "^3.0.2",
-    "puppeteer": "^5.5.0"
+    "puppeteer-core": "^10.2.0"
   },
   "devDependencies": {
+    "puppeteer": "^10.2.0",
     "standard": "^16.0.3"
   }
 }

@@ -1,8 +1,8 @@
 <!--
  * @Author: HCLonely
  * @Date: 2021-01-26 13:21:24
- * @LastEditTime: 2021-01-26 20:42:36
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-09-01 12:41:24
+ * @LastEditors: HCLonely
  * @Description: 模型预览
  * @FilePath: \live2dNodeApi\views\preview.ejs
 -->
@@ -38,7 +38,7 @@
   <h1 align="center" id="preview">模型预览</h1>
   <% for (let i in models) { %>
     <% let num = parseInt(i) + 1 %>
-    <a data-fancybox="gallery" href="/<%- num %>.png" data-caption="模型<%- num %>"><img class="lazyload" alt="模型<%- num %>" src="/<%- num %>.png" />
+    <a data-fancybox="gallery" href="/screenshot/<%- num %>.png" data-caption="模型<%- num %>"><img class="lazyload" alt="模型<%- num %>" src="/screenshot/<%- num %>.png" />
       <div>模型<%- num %></div>
     </a>
   <% } %>

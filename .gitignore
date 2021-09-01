@@ -1,4 +1,5 @@
 node_modules
 .history
-html/index.html
+views/index.html
+static/screenshot/*.png
 .vercel

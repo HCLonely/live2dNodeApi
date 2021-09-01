@@ -2,20 +2,11 @@
     "version": 2,
     "builds": [
         {
-            "src": "/html/**/*",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "/models/**/*",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "/modelList.json",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "/preview/*.png",
-            "use": "@vercel/static"
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "./static"
+            }
         },
         {
             "src": "/main.js",
@@ -25,7 +16,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/"
+            "dest": "/main.js"
         }
     ]
 }

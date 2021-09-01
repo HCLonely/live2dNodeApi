@@ -1,21 +1,22 @@
 /*
  * @Author: HCLonely
  * @Date: 2021-01-26 11:34:11
- * @LastEditTime: 2021-01-26 16:23:24
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-09-01 13:44:54
+ * @LastEditors: HCLonely
  * @Description: 返回模型信息
- * @FilePath: \live2dNodeApi\route\get.js
+ * @FilePath: \live2dNodeApi\routes\get.js
  */
 
 const express = require('express')
 const router = express.Router()
 const fs = require('fs-extra')
+const path = require('path')
 const createError = require('http-errors')
 const { id2name } = require('../tools/modelList')
 const { getName } = require('../tools/modelTextures')
 
-let json = {}
 router.get('/', function (req, res, next) {
+  let json = {}
   if (!req.query.id) return next(createError(400, 'id不能为空'))
   const id = req.query.id.split('-')
   const modelId = parseInt(id[0])
@@ -23,14 +24,20 @@ router.get('/', function (req, res, next) {
   let modelName = id2name(modelId)
   if (Array.isArray(modelName)) {
     modelName = modelTexturesId > 0 ? modelName[modelTexturesId - 1] : modelName[0]
-    const fileName = fs.existsSync('models/' + modelName + '/index.json') ? ('models/' + modelName + '/index.json') : ('models/' + modelName + '/model.json')
+    const indexPath = path.join(__dirname, '../models/', modelName, '/index.json')
+    const modelPath = path.join(__dirname, '../models/', modelName, '/model.json')
+    const fileName = fs.existsSync(indexPath) ? (indexPath) : (modelPath)
     json = fs.readJSONSync(fileName)
-  } else if (fs.existsSync('models/' + modelName + '/texturesModel.cache')) {
-    modelName = fs.readJsonSync('models/' + modelName + '/texturesModel.cache')[modelTexturesId]
-    const fileName = fs.existsSync('models/' + modelName + '/index.json') ? ('models/' + modelName + '/index.json') : ('models/' + modelName + '/model.json')
+  } else if (fs.existsSync(path.join(__dirname, '../models/', modelName, '/texturesModel.cache'))) {
+    modelName = fs.readJsonSync(path.join(__dirname, '../models/', modelName, '/texturesModel.cache'))[modelTexturesId]
+    const indexPath = path.join(__dirname, '../models/', modelName, '/index.json')
+    const modelPath = path.join(__dirname, '../models/', modelName, '/model.json')
+    const fileName = fs.existsSync(indexPath) ? (indexPath) : (modelPath)
     json = fs.readJSONSync(fileName)
   } else {
-    const fileName = fs.existsSync('models/' + modelName + '/index.json') ? ('models/' + modelName + '/index.json') : ('models/' + modelName + '/model.json')
+    const indexPath = path.join(__dirname, '../models/', modelName, '/index.json')
+    const modelPath = path.join(__dirname, '../models/', modelName, '/model.json')
+    const fileName = fs.existsSync(indexPath) ? (indexPath) : (modelPath)
     json = fs.readJSONSync(fileName)
 
     if (modelTexturesId > 0) {

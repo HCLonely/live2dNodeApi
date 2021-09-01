@@ -1,8 +1,8 @@
 /*
  * @Author: HCLonely
  * @Date: 2021-01-26 11:23:19
- * @LastEditTime: 2021-08-30 20:55:36
- * @LastEditors: Steve Li
+ * @LastEditTime: 2021-09-01 12:45:04
+ * @LastEditors: HCLonely
  * @Description: 主文件
  * @FilePath: \live2dNodeApi\app.js
  */
@@ -23,11 +23,12 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'models')))
 app.use(express.static(path.join(__dirname, 'html')))
-app.use(express.static(path.join(__dirname, 'preview')))
+app.use(express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const indexPath = '/'
+const indexRouter = require('./routes/index')
 const getRouter = require('./routes/get')
 const randRouter = require('./routes/rand')
 const randTexturesRouter = require('./routes/randTextures')
@@ -36,6 +37,7 @@ const switchTexturesRouter = require('./routes/switchTextures')
 const previewRouter = require('./routes/preview')
 
 // app.use(indexPath, indexRouter)
+app.use(indexPath, indexRouter)
 app.use(indexPath + 'get', getRouter)
 app.use(indexPath + 'rand', randRouter)
 app.use(indexPath + 'rand_textures', randTexturesRouter)

@@ -1,17 +1,18 @@
 /*
  * @Author: HCLonely
  * @Date: 2021-01-26 11:55:50
- * @LastEditTime: 2021-01-26 13:31:25
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-09-01 13:36:07
+ * @LastEditors: HCLonely
  * @Description: 模型处理
- * @FilePath: \live2dNodeApi\tools\id2name.js
+ * @FilePath: \live2dNodeApi\tools\modelList.js
  */
 
 const fs = require('fs-extra')
+const path = require('path')
 
 /* 获取模型列表 */
 function getList () {
-  return fs.readJsonSync('modelList.json')
+  return fs.readJsonSync(path.join(__dirname, '../modelList.json'))
 }
 
 /* 获取模组名称 */
