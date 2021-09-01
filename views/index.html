@@ -1,0 +1,102 @@
+<!--
+ * @Author: HCLonely
+ * @Date: 2021-01-26 16:39:29
+ * @LastEditTime: 2021-09-01 15:27:19
+ * @LastAuthor: Please set LastEditors
+ * @Description: README
+ * @FilePath: \live2dNodeApi\README.md
+-->
+
+<p>适用于<a href="https://github.com/HCLonely/live2d.user.js">live2d.user.js</a>,<a href="https://github.com/fghrsh/live2d_demo">live2d_demo</a>的基于 Nodejs 的后端 Api.</p>
+<h2 id="使用方法">使用方法</h2>
+<h3 id="使用本地服务器搭建">使用本地服务器搭建</h3>
+<ol>
+<li>安装<a href="https://nodejs.org/en/">NodeJs</a>, <a href="https://git-scm.com/">Git</a></li>
+<li>克隆本项目<code>git clone https://github.com/HCLonely/live2dNodeApi.git</code></li>
+<li>定位到项目目录<code>cd live2dNodeApi</code></li>
+<li>安装依赖<code>npm install</code> / <code>cnpm install</code> / <code>pnpm install</code></li>
+<li>启动服务器<code>npm start</code></li>
+</ol>
+<h3 id="使用vercel搭建">使用Vercel搭建</h3>
+<h4 id="一键搭建">一键搭建</h4>
+<p><a href="https://vercel.com/import/project?template=https://github.com/HCLonely/live2dNodeApi"><img src="https://vercel.com/button" alt="Deploy to Vercel"></a></p>
+<h4 id="自定义模型">自定义模型</h4>
+<ol>
+<li>安装<a href="https://nodejs.org/en/">NodeJs</a>, <a href="https://git-scm.com/">Git</a></li>
+<li>安装Vercel CLI<code>npm install vercel -g</code></li>
+<li>克隆本项目<code>git clone https://github.com/HCLonely/live2dNodeApi.git</code></li>
+<li>添加你的模型</li>
+<li>运行命令<code>npm run build</code></li>
+<li>部署到Vercel<code>vercel --prod</code></li>
+</ol>
+<h2 id="命令">命令</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+<th>额外说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>npm start</code></td>
+<td>启动 api 服务器</td>
+<td></td>
+</tr>
+<tr>
+<td><code>npm run update</code></td>
+<td>重新生成<code>modelList.json</code>文件</td>
+<td>用于增加或删除模型后更新模型列表</td>
+</tr>
+<tr>
+<td><code>npm run check</code></td>
+<td>检测模型的主配置文件格式及模型文件的完整性</td>
+<td></td>
+</tr>
+<tr>
+<td><code>npm run screenshot</code></td>
+<td>生成模型的预览图，放在<code>preview</code>文件夹</td>
+<td></td>
+</tr>
+<tr>
+<td><code>npm run pre</code></td>
+<td>在网页上查看模型的预览图，需要先生成</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="配置">配置</h2>
+<p>修改<code>config.json</code>文件进行配置：</p>
+<pre><code class="language-json">{
+  &quot;port&quot;: 2333, // 监听端口，默认2333
+  &quot;ssl&quot;:{
+    &quot;enable&quot;:false, // 是否启用ssl
+    &quot;privateCrt&quot;:&quot;&quot;, // ssl证书文件路径
+    &quot;privateKey&quot;:&quot;&quot; // ssl私钥文件路径
+  }
+}
+</code></pre>
+<h2 id="模型目录结构">模型目录结构</h2>
+<pre><code class="language-shell">models
+├─模型文件夹 # 同一角色不同皮肤，不同皮肤共用一个index.json文件
+│  ├─index.json # 必须，或model.json
+│  └─...
+├─模型文件夹 # 同一角色不同皮肤，每个皮肤都有各自的index.json文件
+│  ├─模型文件夹 # 单个模型
+│  │  ├─index.json # 必须，或model.json
+│  │  └─...
+│  └─模型文件夹 # 单个模型
+│      ├─index.json # 必须，或model.json
+│      └─...
+└─模型文件夹 # 单个模型
+    ├─index.json # 必须，或model.json
+    └─...
+</code></pre>
+<blockquote>
+<p>详情请参考<a href="https://github.com/HCLonely/live2dNodeApi/tree/master/models">models</a>目录</p>
+</blockquote>
+<h2 id="常见问题">常见问题</h2>
+<h3 id="依赖安装慢">依赖安装慢</h3>
+<p><a href="https://www.baidu.com/s?ie=utf-8&amp;wd=npm%E5%AE%89%E8%A3%85%E6%85%A2">npm 安装慢</a></p>
+<p><a href="https://www.baidu.com/s?ie=utf-8&amp;wd=puppeteer%E5%AE%89%E8%A3%85%E6%85%A2">下载 Chromium 慢</a></p>
+<h3 id="更新模型后顺序乱了">更新模型后顺序乱了</h3>
+<p>请重命名模型文件夹进行排序，参考<a href="https://github.com/HCLonely/live2dNodeApi/tree/master/models">models</a>目录。</p>
