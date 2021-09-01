@@ -17,6 +17,10 @@
             "use": "@vercel/static"
         },
         {
+            "src": "/static/**/*",
+            "use": "@vercel/static"
+        },
+        {
             "src": "/modelList.json",
             "use": "@vercel/static"
         },
