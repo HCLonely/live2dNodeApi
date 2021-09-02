@@ -1,7 +1,7 @@
 /*
  * @Author: HCLonely
  * @Date: 2021-01-26 11:34:11
- * @LastEditTime: 2021-09-01 13:44:54
+ * @LastEditTime: 2021-09-02 10:47:15
  * @LastEditors: HCLonely
  * @Description: 返回模型信息
  * @FilePath: \live2dNodeApi\routes\get.js
@@ -29,7 +29,8 @@ router.get('/', function (req, res, next) {
     const fileName = fs.existsSync(indexPath) ? (indexPath) : (modelPath)
     json = fs.readJSONSync(fileName)
   } else if (fs.existsSync(path.join(__dirname, '../models/', modelName, '/texturesModel.cache'))) {
-    modelName = fs.readJsonSync(path.join(__dirname, '../models/', modelName, '/texturesModel.cache'))[modelTexturesId]
+    const models = fs.readJsonSync(path.join(__dirname, '../models/', modelName, '/texturesModel.cache'))
+    modelName = models[modelTexturesId > models.length ? 0 : (modelTexturesId - 1)]
     const indexPath = path.join(__dirname, '../models/', modelName, '/index.json')
     const modelPath = path.join(__dirname, '../models/', modelName, '/model.json')
     const fileName = fs.existsSync(indexPath) ? (indexPath) : (modelPath)
